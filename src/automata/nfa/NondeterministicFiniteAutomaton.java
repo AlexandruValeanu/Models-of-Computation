@@ -1,6 +1,7 @@
 package automata.nfa;
 
 import utility.Alphabet;
+import utility.NullStateException;
 import utility.State;
 import utility.StatesSet;
 
@@ -11,11 +12,11 @@ import java.util.Set;
 public class NondeterministicFiniteAutomaton {
     private final StatesSet states;
     private final Alphabet alphabet;
-    private final TransitionFunction table;
+    private final TransitionFunctionNFA table;
     private final State initialState;
     private final StatesSet acceptingStates;
 
-    public NondeterministicFiniteAutomaton(StatesSet states, Alphabet alphabet, TransitionFunction table, State initialState, StatesSet acceptingStates) {
+    public NondeterministicFiniteAutomaton(StatesSet states, Alphabet alphabet, TransitionFunctionNFA table, State initialState, StatesSet acceptingStates) {
         this.states = states;
         this.alphabet = alphabet;
         this.table = table;
@@ -31,7 +32,7 @@ public class NondeterministicFiniteAutomaton {
         return alphabet;
     }
 
-    public TransitionFunction getTransitionFunction() {
+    public TransitionFunctionNFA getTransitionFunction() {
         return table;
     }
 
@@ -43,8 +44,12 @@ public class NondeterministicFiniteAutomaton {
         return acceptingStates;
     }
 
-    public boolean run(String word){
+    public boolean run(String word) throws NullStateException {
         Set<State> currentStates = Collections.singleton(initialState);
+
+        if (initialState == null){
+            throw new NullStateException("nfa::initialState");
+        }
 
         for (char readSymbol: word.toCharArray()){
             Set<State> nextStates = new HashSet<>();

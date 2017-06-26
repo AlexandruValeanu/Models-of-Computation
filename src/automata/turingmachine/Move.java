@@ -2,6 +2,8 @@ package automata.turingmachine;
 
 import utility.State;
 
+import java.util.Objects;
+
 public class Move {
     private final State state;
     private final char charToWrite;
@@ -29,19 +31,15 @@ public class Move {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Move move = (Move) o;
-
-        return charToWrite == move.charToWrite && (state != null ? state.equals(move.state) : move.state == null) &&
+        return charToWrite == move.charToWrite &&
+                Objects.equals(state, move.state) &&
                 direction == move.direction;
     }
 
     @Override
     public int hashCode() {
-        int result = state != null ? state.hashCode() : 0;
-        result = 31 * result + (int) charToWrite;
-        result = 31 * result + (direction != null ? direction.hashCode() : 0);
-        return result;
+        return Objects.hash(state, charToWrite, direction);
     }
 
     @Override

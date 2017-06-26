@@ -1,5 +1,7 @@
 package utility;
 
+import java.util.Objects;
+
 public class State {
     private final String label;
 
@@ -11,15 +13,13 @@ public class State {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         State state = (State) o;
-
-        return label != null ? label.equals(state.label) : state.label == null;
+        return Objects.equals(label, state.label);
     }
 
     @Override
     public int hashCode() {
-        return label != null ? label.hashCode() : 0;
+        return Objects.hash(label);
     }
 
     @Override
@@ -27,3 +27,4 @@ public class State {
         return label;
     }
 }
+
