@@ -2,7 +2,10 @@ package automata.dfa;
 
 import utility.State;
 
-import java.util.*;
+import java.util.AbstractMap;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TransitionFunctionDFA {
     private final Map<Map.Entry<State, Character>, State> map;
