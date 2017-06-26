@@ -4,9 +4,9 @@ import automata.dfa.DeterministicFiniteAutomaton;
 import automata.nfa.NondeterministicFiniteAutomaton;
 import automata.nfa.TransitionFunctionNFA;
 import utility.Alphabet;
+import utility.Constants;
 import utility.State;
 import utility.StatesSet;
-import utility.Constants;
 
 import java.util.ArrayDeque;
 import java.util.HashSet;
