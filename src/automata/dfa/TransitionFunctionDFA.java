@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TransitionFunctionDFA {
-    private final Map<Map.Entry<State, Character>, State> map;
+    private final Map<Map.Entry<State, Character>, State> map; //
 
     public TransitionFunctionDFA(){
         this.map = new HashMap<>();
