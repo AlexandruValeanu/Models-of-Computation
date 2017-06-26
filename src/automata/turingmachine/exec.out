@@ -1,0 +1,25 @@
+q0 '⊢' => automata.TuringMachine.automata.TuringMachine.Move{state=q1, charToWrite=⊢, direction=RIGHT}
+⊢aeaeaeaee 0
+q1 'a' => automata.TuringMachine.automata.TuringMachine.Move{state=q0, charToWrite=a, direction=RIGHT}
+⊢aeaeaeaee 1
+q0 'e' => automata.TuringMachine.automata.TuringMachine.Move{state=q1, charToWrite=e, direction=RIGHT}
+⊢aeaeaeaee 2
+q1 'a' => automata.TuringMachine.automata.TuringMachine.Move{state=q0, charToWrite=a, direction=RIGHT}
+⊢aeaeaeaee 3
+q0 'e' => automata.TuringMachine.automata.TuringMachine.Move{state=q1, charToWrite=e, direction=RIGHT}
+⊢aeaeaeaee 4
+q1 'a' => automata.TuringMachine.automata.TuringMachine.Move{state=q0, charToWrite=a, direction=RIGHT}
+⊢aeaeaeaee 5
+q0 'e' => automata.TuringMachine.automata.TuringMachine.Move{state=q1, charToWrite=e, direction=RIGHT}
+⊢aeaeaeaee 6
+q1 'a' => automata.TuringMachine.automata.TuringMachine.Move{state=q0, charToWrite=a, direction=RIGHT}
+⊢aeaeaeaee 7
+q0 'e' => automata.TuringMachine.automata.TuringMachine.Move{state=q1, charToWrite=e, direction=RIGHT}
+⊢aeaeaeaee 8
+q1 'e' => automata.TuringMachine.automata.TuringMachine.Move{state=q0, charToWrite=e, direction=RIGHT}
+⊢aeaeaeaee 9
+q0 ' ' => automata.TuringMachine.automata.TuringMachine.Move{state=qrej, charToWrite=⊢, direction=RIGHT}
+⊢aeaeaeaee  10
+qrej ' ' => null
+⊢aeaeaeaee⊢  11
+false
